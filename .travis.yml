@@ -1,18 +1,19 @@
 sudo: false
 language: node_js
 node_js:
-- 4
-- 6
-- 8
+  - 4
+  - 6
+  - 8
 script:
-- npm test
+  - npm test
 after_success:
-- npm run report-cov
+  - npm run report-cov
 deploy:
   provider: npm
   email: d2ltravisdeploy@d2l.com
   api_key:
-    secure: QBj/XC7lHHMMiDvcTZEz36fCvfcf87xQXF/eLB4GQ3KqYYfsmdb0/rfMLRp/u9FAf9tz/5RyhG6t+u+CHJFuSG7u2vmztJ6mQgSQFAQPx0PiNR004syaJ71/y/D3kM26WDg4LqWt7fejec9fpzuTxrQ8H/C67i5Loe1IsDcPvNUhGKp985JDdrGc9hcFmpYW9wenl4qWCt6V3lK/KJuybg+souyfgc/tEGnWloHvZgZC0JZ+xbgT2n2a9wGHuzhwHKB65P+sEq0uwB+5UAtPaHwq8rWnqPcxd3I9gBIHg05sxuie1Pz4h4xU2/y2syM64WKQalUL4rHVHVuV8vS5bYQ6g+PasKb9bq1UIVE9VX+zdvfDQGFiIfBcrQmLTopIrskVLDwZ2o+iToMHsFJPj3LsxQtonF06ftMzc5FJFj0yk1Hg0UKh+44GvlXPTDHa8yFf4nF9DhsftG72z4zwX1ns0FptzaiHKqchG9W2zoeE2tJDtmXHEgo0obOdBSH4uxhK9x4sHDH6nyNrsDRgWvABIU5P6hi+EZ/XBz6IxcVAlkJ3B4smzAvZdncZ2r4T7myrge4bzwJJ0Tl5QISJ/TwF4r+Efl/83ZOUNKzUAvgBEJgMqXXm+vUw0ZDsDIScwKnhhqFW4QLwCnZyMUYAF42DaD9rkf0lO/CqB0179Z4=
+    # d2l-travis-deploy: a89e......2259
+    secure: HtTG4VL8j5dXcI3nkeMOnjjBMhf/vIQjyAEACFIxsp/+oGm0qK/bfeBO0vAxCSYI+p/7ZqzQPK3zWPxj0HnZv0iayifvA14/O18zWJpvt2JXaRdKLkXP6jPC1GPeDkm+lzCSXIp4aTjHwIpCTtJPh0fuR5wJZnMTGP5/aj5EJZ+WoIkWSuHpoGpoX5XTatZvl1OZNvyO8kMSiJXMAjHAsI7aClBKpY0LCZ3miDg56hA7P8KPwu1diZ3hIGDpY3IssCpiq/HQL2unvzdLuRKr/GkVbw4drEneyB1tnsU7c5JYbE+hyExuY/oKOImfeucrqYQsEMmR772cWF1eP2K8xGeGKaH/33N2W81RcsL6LvZPfM6DN9eF1jQge9y020+kgI/+y/q5ymISN0VMCPyrkUvVd1NkXQYyKKrZYXVLu/TF3xb2Dmvg60TKCPoINyggaaPaFzpWhevHhVwF1qBWVZbgXWHxh1UPgSTwdDtWla5UScK7nndJhrK8dhewxi6bxFEffs2DkUMIOXVcC5WFdNn2QJ+SaXFfXI66dsudy+GLacss7iRkMwfWKsp39gK6sBGuJDCRSJwL5GnPO1kRUOeUDAITtHamkxEKyPYE3NN1XctfA9/35r/1HWa4Ooiq8xdVerAXZEg6iDvgE2/K0Ju+cwp2f9tljlAPwX+x9fI=
   on:
     tags: true
     repo: Brightspace/node-promised-method

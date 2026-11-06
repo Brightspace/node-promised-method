@@ -9,10 +9,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "check-style": "eslint --ignore-path .gitignore .",
-    "test-unit": "nyc --all mocha test/*.js",
-    "test": "npm run check-style && npm run test-unit",
-    "report-cov": "nyc report --reporter lcovonly && coveralls < ./coverage/lcov.info"
+    "check-style": "eslint promised-method.js test/*.js",
+    "test-unit": "node --test test/*.js",
+    "test": "npm run check-style && npm run test-unit"
   },
   "repository": {
     "type": "git",
@@ -29,12 +28,9 @@
   },
   "homepage": "https://github.com/Brightspace/node-promised-method#readme",
   "devDependencies": {
-    "chai": "^4.1.0",
-    "chai-as-promised": "^7.1.1",
-    "coveralls": "^2.13.1",
-    "eslint": "^4.2.0",
-    "eslint-config-brightspace": "^0.3.1",
-    "mocha": "^3.4.2",
-    "nyc": "^11.0.3"
+    "chai": "^6.3.0",
+    "chai-as-promised": "^8.0.2",
+    "eslint": "^10.13.0",
+    "eslint-config-brightspace": "^4.0.0"
   }
 }

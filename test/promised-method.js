@@ -1,16 +1,18 @@
 'use strict';
 
-var expect = require('chai').expect;
+const { describe, it } = require('node:test');
 
-require('chai').use(require('chai-as-promised'));
+const expect = require('chai').expect;
 
-var promised = require('../');
+require('chai').use(require('chai-as-promised').default);
+
+const promised = require('../');
 
 describe('promised-method', function() {
 	it('should reject when method throws', function() {
-		var e = new Error('thrown error');
+		const e = new Error('thrown error');
 
-		var method = promised(function() {
+		const method = promised(function() {
 			throw e;
 		});
 
@@ -18,9 +20,9 @@ describe('promised-method', function() {
 	});
 
 	it('should resolve with method return value', function() {
-		var expected = {};
+		const expected = {};
 
-		var method = promised(function() {
+		const method = promised(function() {
 			return expected;
 		});
 
@@ -33,15 +35,15 @@ describe('promised-method', function() {
 			return this;
 		});
 
-		var context = new Clazz();
+		const context = new Clazz();
 
 		return expect(context.foo()).to.eventually.equal(context);
 	});
 
 	it('should pass all arguments', function() {
-		var expected = ['cats', 'dogs', 'lemurs'];
+		const expected = ['cats', 'dogs', 'lemurs'];
 
-		var method = promised(function() {
+		const method = promised(function() {
 			return Array.prototype.slice.apply(arguments);
 		});
 
